@@ -3,15 +3,15 @@ provider "aws" {
 }
 
 provider "vault" {
-  address = "<vaultIP address>:8200"
+  address = "<vaultIP address>:8200"    #server IP address here
   skip_child_token = true
 
   auth_login {
     path = "auth/approle/login"
 
     parameters = {
-      role_id = "<>"
-      secret_id = "<>"
+      role_id = "<>"  #enter role ID here
+      secret_id = "<>"   #enter secret ID here
     }
   }
 }
